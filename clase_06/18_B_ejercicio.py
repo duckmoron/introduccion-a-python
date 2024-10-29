@@ -2,9 +2,6 @@
 
 import random
 
-opciones = ["piedra", "papel", "tijera"]
-partida = 3
-juegos_ganados = 0
 
 def eleccion_computadora():
     computadora = random.choice(opciones)
@@ -65,9 +62,15 @@ def fin_partida(resultado):
             main()
 
 def main():
-    juego(
-        eleccion_jugador(),
-        eleccion_computadora()
-    )
+    jugador = eleccion_jugador()
+    computadora = eleccion_computadora()
+    juego(jugador,computadora)
+
+
+
+opciones = ["piedra", "papel", "tijera"]
+
+partida = 3
+juegos_ganados = 0
 
 main()

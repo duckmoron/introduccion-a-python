@@ -1,34 +1,8 @@
 # Transformar el juego ahoracado... en funciones
-
-personajes_senor_de_los_anillos = [
-    "Frodo",
-    "Sam",
-    "Aragorn",
-    "Legolas",
-    "Gimli",
-    "Gandalf",
-    "Boromir",
-    "Merry",
-    "Pippin",
-    "Saruman",
-    "Sauron",
-    "Gollum",
-    "Galadriel",
-    "Elrond",
-    "Bilbo",
-]
-
-print("=====================")
-print("✨      JUEGO     ✨")
-print("=====================")
-
-vidas = 5
-personajes_adivinados = 0
-
-def eleccion_jugador():
-    personaje_usuario = input("Ingresa el nombre de un personaje del Señor de los Anillos: ")
-    personaje_usuario = personaje_usuario.strip().capitalize()
-    return personaje_usuario
+def elegir_personaje():
+    eleccion_personaje = input("Ingresa el nombre de un personaje del Señor de los Anillos: ")
+    eleccion_personaje = eleccion_personaje.strip().capitalize()
+    return eleccion_personaje
 
 def comparar_respuesta(personaje_usuario):
 
@@ -61,11 +35,33 @@ def fin_partida(comparacion):
         print(f"Tienes {vidas} vidas.")
         main()
 
-def main():
     
-    jugador = eleccion_jugador()
+print("=====================")
+print("✨      JUEGO     ✨")
+print("=====================")
+
+vidas = 5
+personajes_adivinados = 0
+personajes_senor_de_los_anillos = [
+        "Frodo",
+        "Sam",
+        "Aragorn",
+        "Legolas",
+        "Gimli",
+        "Gandalf",
+        "Boromir",
+        "Merry",
+        "Pippin",
+        "Saruman",
+        "Sauron",
+        "Gollum",
+        "Galadriel",
+        "Elrond",
+        "Bilbo",
+    ]
+def main():
+    jugador = elegir_personaje()
     comparar = comparar_respuesta(jugador)
     fin_partida(comparar)
-
 
 main()

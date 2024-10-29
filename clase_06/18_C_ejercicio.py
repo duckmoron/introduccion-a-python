@@ -33,16 +33,19 @@ def introducir_numeros():
 
 def introducir_operador():
 
+    print()
+    print("MENÚ")
+    print("---------------")
     print("1. Sumar")
     print("2. Restar")
     print("3. Multiplicar")
     print("4. Dividir")
     print("x. Salir")
-
+    print("---------------")
     opciones = ["1", "2", "3", "4", "x"]
 
     while True:
-        operador = input("Seleccionar una opción del menú: ")
+        operador = input("Seleccionar una opción del menú e ingresá 1,2,3,4 o x: ")
         if operador in opciones:
             return operador
 
@@ -60,7 +63,10 @@ def realizar_operaciones(numero_1, numero_2, operador):
     return resultado
     
 def mostrar_resultado(resultado):
+
+    print("-")
     print(f"Resultado: {resultado}")
+    print("-")
 
 def main():
     numero_1, numero_2 = introducir_numeros()

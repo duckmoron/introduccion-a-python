@@ -4,8 +4,8 @@ de un estudiante en una tupla.
 Calcular la media de las notas y mostrar las notas y el promedio
 Usar las funciones (hasta 4)
 """
-materias = ["matematicas","lengua","ingles","plastica","musica"]
-def notas_estudiante():
+
+def notas_estudiante(materias):
     notas = []
     for materia in materias:
         while True:
@@ -24,7 +24,8 @@ def calcular_promedio(notas):
     return suma_notas / len(notas)
 
 def main():
-    notas = notas_estudiante()
+    materias = ["matematicas","lengua","ingles","plastica","musica"]
+    notas = notas_estudiante(materias)
     promedio = calcular_promedio(notas)
     titulo = "Notas del estudiante:"
     lineas = "-" * len(titulo)
